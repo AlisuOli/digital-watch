@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Open+Sans:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35vh;
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s;
+   /*background-image: url(https://64.media.tumblr.com/324b670f9725ebd818a0f3d9f29fa0be/66e7a7e5cdd774ef-7c/s640x960/2d8ab097e2ee4d9a686b1422d2932630f81ea8d6.gifv); */
+    color: rgb(255, 255, 255);
+}
+
+/* Style do Relogio */
+
+.relogio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    width: 590px;
+    background-color: rgb(226, 147, 0);
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.relogio div {
+    margin: 25px;
+    height: 150px;
+    width: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.801);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+.tempo-num {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 80px;
+    margin-bottom: -20px;
+}
+
+.tempo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.pontos {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 40px;
+}
+
+/* Style do Relogio */
+
+/* Modo Escuro */
+
+#tema-escuro {
+    position: absolute;
+    bottom: 32px;
+    left: 10px;
+}
+
+body.dark {
+    background-color: rgb(21, 20, 32);
+    transition: 0.2s;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+label {
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    padding: 5px;
+    position: relative;
+    height: 20px;
+    width: 42px;
+
+    transform: scale(1);
+}
+
+.label .bolinha-seleção {
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+
+    height: 24px;
+    width: 24px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + label .bolinha-seleção{
+    transform: translateX(24px);
+}
+
+.fa-sun {
+    color: rgb(255, 230, 0);
+}
+
+.fa-moon {
+    color: rgb(223, 171, 0);
+}
+
+/* Modo Escuro */
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid white;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    font-size: 11px;
+    background-color: rgb(21, 20, 32);
+    font-family: 'Open Sans', sans-serif;
+}
